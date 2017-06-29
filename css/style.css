@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+/* Box Model Hack */
+*, *:before, *:after {
+   -moz-box-sizing: border-box; /* Firexfox */
+   -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+   box-sizing: border-box; /* IE */
+}
+
+#wrapped {
+  display: none;
+}
+
+.landing-body {
+  overflow-y: hidden;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+}
+
+/************************ Landing Page ************************/
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+}
+
+#landing-title {
+  z-index: 2;
+  position: absolute;
+  font-size: 68px;
+  margin-top: 5%;
+  margin-left: 2.5%;
+  color: white;
+  font-family: 'Permanent Marker', sans-serif;
+}
+
+.landing-button {
+  z-index: 2;
+  position: absolute;
+  width: 35%;
+  margin-top: 20%;
+  margin-left: 18%;
+}
+
+#contact-us {
+  margin-top: 25%;
+}
+
+/* Color Filter over video */
+
+.text {
+  z-index: 2;
+  position: absolute;
+  background: rgba(2,119,189,0.4);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Social Media Icons & Mute Button */
+
+.social {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  right: 0.5%;
+  width: 2%;
+}
+
+.social img {
+  width: 100%;
+}
+
+.mute-video {
+  background: url("../img/mute.png") no-repeat center;
+  position: absolute;
+  z-index: 2;
+  background-size:32px;
+  border:0;
+  width:32px;
+  height:32px;
+  bottom: 1%;
+  left: 0.5%;
+}
+
+.unmute-video {
+  background: url("../img/un-mute.png") no-repeat center;
+  position: absolute;
+  z-index: 2;
+  background-size:32px;
+}
+
+.unmute-video:focus, .mute-video:focus {
+  background-color: transparent;
+}
+
+/* Beta Banner */
+
+#beta-banner {
+  position: absolute;
+  z-index: 2;
+}
+
+#banner {
+  width: 30%;
+}
+
+/************************ Main Page ************************/
+
+/* Navbar */
+
+nav.nav-center ul {
+  text-align: center;
+}
+nav.nav-center ul li {
+  display: inline;
+  float: none;
+}
+nav.nav-center ul li a {
+  display: inline-block;
+}
+
+/* Google Maps API */
+
+#map_canvas {
+  width: 100%;
+  height: 500px;
+}
+
+#loading {
+  display: none;
+  position: absolute;
+  margin-top: 10%;
+  margin-left: 26.5%;
+}
+
+#infi {
+  width: 50%;
+}
+
+/* Error Message */
+
+#error-message {
+  display: none;
+  position: absolute;
+  text-align: center;
+  font-size: 28px;
+  margin-left: 15%;
+  margin-top: 8%;
+}
+
+
+/* Directions Table */
+
+#directionsPanel .adp table {
+  font-family: Poppins, sans-serif;
+}
+
+.adp-warnbox {
+  display: none;
+}
+
+/*  Main Page Buttons */
+
+.google-button {
+  width: 49.7%;
+}
+
+.mobile-btn {
+  display: none;
+}
+
+/************************ Contact Page ************************/
+
+.contact-form {
+  margin-top: 5%;
+}
+
+/* Form Icon Colour */
+.input-field .prefix.active {
+  color: #0277bd;
+}
+
+/* Text Form Colour */
+input[type=text]:focus:not([readonly]){
+  border-bottom: 1px solid #0277bd;
+  box-shadow: 0 1px 0 0 #0277bd;
+}
+
+input[type=text]:focus:not([readonly])+label{
+  color: #0277bd;
+}
+
+/* Email Form Colour */
+input[type=email]:focus:not([readonly]){
+  border-bottom: 1px solid #0277bd;
+  box-shadow: 0 1px 0 0 #0277bd;
+}
+
+input[type=email]:focus:not([readonly])+label{
+  color: #0277bd;
+}
+
+/* Text Area Form Colour */
+textarea.materialize-textarea:focus:not([readonly]){
+  border-bottom: 1px solid #0277bd;
+  box-shadow: 0 1px 0 0 #0277bd;
+}
+
+textarea.materialize-textarea:focus:not([readonly])+label{
+  color: #0277bd;
+}
+
+
+
+/************************ Media Query's ************************/
+
+/*/* Mobiles */
+@media screen and (max-width: 676px) {
+
+  /***** LANDING PAGE MEDIA QUERYS *****/
+  .landing-body {
+    background-image: url("../img/ldn-map.jpg");
+    background-position: cover;
+  }
+
+  .vid-container {
+    display: none;
+  }
+
+  .mute-video {
+    display: none;
+  }
+
+  #landing-title {
+    font-size: 38px;
+    margin: 0;
+    margin-top: 2%;
+    text-align: center;
+    position:relative;
+  }
+
+  .landing-button {
+    margin: 0;
+    margin-top: 30%;
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    width: 100%;
+  }
+
+  #contact-us {
+    margin-top: 0;
+  }
+
+  .social {
+    height: 152px;
+    width: 33px;
+    right: 1%;
+    bottom: 1%;
+  }
+
+  /***** MAIN PAGE MEDIA QUERYS *****/
+  nav {
+    font-weight: 600;
+  }
+
+  #error-message {
+    margin-left: -6%;
+  }
+
+  .google-button {
+    display: none;
+  }
+
+  .mobile-btn {
+    display: initial; 
+    font-weight: 600;
+  }
+
+  #infi {
+    margin-top: 40%;
+    margin-left: -60px;
+    width: 100%;
+  }
+
+  #find-me {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #show-all {
+    width: 100%;
+  }
+
+  /***** CONTACT PAGE MEDIA QUERYS *****/
+
+  .contact-form {
+    margin-right: 10%;
+  }
+
+  .material-icons {
+    display: none;
+  }
+
+}
+
+/***** Tablets *****/ 
+@media screen and (max-width: 1029px) {
+
+  /* LANDING PAGE MEDIA QUERYS */
+  .landing-body {
+    background-image: url("../img/ldn-map.jpg");
+    background-position: center;
+   /* background-attachment: fixed;
+    background-position: 47% 25%;
+    background-repeat: no-repeat;*/
+  }
+
+  .vid-container {
+    display: none;
+  }
+
+  .mute-video {
+    display: none;
+  }
+
+  #landing-title {
+    font-size: 38px;
+    margin: 0;
+    margin-top: 2%;
+    text-align: center;
+    position: relative;
+  }
+
+  .landing-button {
+    margin: 0;
+    margin-top: 30%;
+    position: relative;
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+  }
+
+  #contact-us {
+    margin-top: 0;
+  }
+
+  #find-me {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #show-all {
+    width: 100%;
+  }
+
+  #loading {
+    margin-left: 28.5%;
+  }
+
+  .social {
+    height: 152px;
+    width: 33px;
+    right: 1%;
+  }
+
+  /***** CONTACT PAGE MEDIA QUERYS *****/
+
+  .contact-form {
+    margin-right: 10%;
+  }
+  
+}
+
+/* Mac 15inch */
+@media screen and (min-width: 2560px) {
+
+ .text{
+  right: -5.7%;
+ }
+
+ .landing-button {
+    margin-left: 50%;
+    margin-bottom: 10%;
+    width: 50%;
+    height: 7%;
+    font-size: 4em; 
+    transform: translateX(-50%);
+    left: 0;
+ }
+
+ #landing-title {
+    margin-left: 50%;
+    font-size: 110px;
+    width: 50%;
+    transform: translateX(-50%);
+    left: 0;
+ }
+
+ .social {
+  right: -5%;
+ }
+
+}

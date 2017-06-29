@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find A Bike</title>
+  <!--Import Google Icon Font
+  =====================================-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS 
+  =====================================-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <!-- My Stylesheet 
+  =====================================-->
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+  <div id="wrapped">
+
+    <!-- Navbar 
+    =========================================================================-->
+    <nav class="nav-center white" role="navigation">
+      <div class="nav-wrapper container">
+        <ul>
+          <li><a class="light-blue-text darken-3" href="./main.html">HOME</a></li>
+          <li><a class="red-text accent-3" href="./contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Contact Form
+    =========================================================================-->
+    <div class="contact-form center-align">
+      <form method="POST" action="http://formspree.io/onahypetingx@gmail.com">
+        <div class="row">
+            <div class="row">
+              <div class="input-field col s12 m8 l8">
+                <i class="material-icons prefix">account_circle</i>
+                <input name="name" id="icon_prefix" type="text" class="validate">
+                <label for="icon_prefix">First Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 m8 l8">
+                <i class="material-icons prefix">email</i>
+                <input name="email" id="icon_email" type="email" class="validate">
+                <label for="icon_email">Email</label>
+              </div>
+            </div>
+          </form>
+        <div class="row">
+          <div class="input-field col s12 m12 l12">
+            <i class="material-icons prefix">mode_edit</i>
+            <textarea name="message" id="icon_prefix2" class="materialize-textarea"></textarea>
+            <label for="icon_prefix2">Message</label>
+          </div>
+        </div>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </div>
+
+  </div> <!-- #wrapped, page fade on load -->
+
+    <!-- JAVASCRIPT 
+    =========================================================================-->
+    <!-- jQuery 
+    =====================================-->
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript 
+    =====================================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <!-- My Script 
+    =====================================-->
+    <script type="text/javascript" src="./scripts/script.js"></script>
+  </div>
+</body>
+</html>

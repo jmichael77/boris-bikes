@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find A Bike</title>
+  <!--Import Google Icon Font
+  =====================================-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS 
+  =====================================-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <!-- My Stylesheet 
+  =====================================-->
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+  <div id="wrapped">
+    <!-- Navbar 
+    =========================================================================-->
+    <nav class="nav-center white" role="navigation">
+      <div class="nav-wrapper container">
+        <ul>
+          <li><a class="light-blue-text darken-3" href="./main.html">HOME</a></li>
+          <li><a class="red-text accent-3" href="./contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+  
+   <!-- Google Maps API 
+    =========================================================================-->
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m12 l12">
+            <!-- Loading Gif -->
+          <div id="loading">
+            <img alt="loading" id="infi" src="./img/load.gif">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <button type="button" id="find-me" class="find-me mobile-btn google-button btn light-blue darken-3">Find My Postition</button>
+          <button type="button" id="show-all" class="show-all mobile-btn google-button btn red accent-3">Show All BikePoints</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <h1 id="error-message"> Can't Get Directions Without Location</h1>
+          <div id="map_canvas">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <button type="button" id="find-me" class="find-me google-button btn light-blue darken-3">Find My Postition</button>
+          <button type="button" id="show-all" class="show-all google-button btn red accent-3">Show All BikePoints</button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Text Directions Panel -->
+    <div class="container">
+      <div class="row">
+        <div class="col l12">
+          <div id="directionsPanel"></div>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- #wrapped page fade on load -->
+
+    <!-- JAVASCRIPT 
+    =========================================================================-->
+    <!-- jQuery 
+    =====================================-->
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript 
+    =====================================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <!-- My Script 
+    =====================================-->
+    <script type="text/javascript" src="./scripts/script.js"></script>
+    <!-- CLUSTER GOOGLE MAP MARKERS 
+    =====================================-->
+    <!-- <script 
+      src="./scripts/markerclusterer.js">
+    </script> -->
+     <!-- GOOGLE MAPS API 
+    =====================================-->
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtDCJX_HnBmTn1ePWnb3R4urx9N0EBe6o&callback=initMap"> 
+    </script>
+</body>
+</html>
