@@ -30,34 +30,63 @@
 
     <!-- Contact Form
     =========================================================================-->
-    <div class="contact-form center-align">
-      <form method="POST" action="http://formspree.io/onahypetingx@gmail.com">
-        <div class="row">
-            <div class="row">
-              <div class="input-field col s12 m8 l8">
-                <i class="material-icons prefix">account_circle</i>
-                <input name="name" id="icon_prefix" type="text" class="validate">
-                <label for="icon_prefix">First Name</label>
-              </div>
+    <div class="container">
+
+     <div class="row">
+        <div class="col s12 m12 l12">
+          <div class="card blue lighten-2">
+            <div class="card-content white-text">
+              <span class="center-align card-title">Hello There!</span>
+              <p> 
+                This website is currently in the beta stages so there may be some minor bugs and glitches.
+                Feel free to report any promblems or if you just want to say HI, send us an email by filling
+                out our smart form below and clicking the send button.
+              </p>
             </div>
-            <div class="row">
-              <div class="input-field col s12 m8 l8">
-                <i class="material-icons prefix">email</i>
-                <input name="email" id="icon_email" type="email" class="validate">
-                <label for="icon_email">Email</label>
-              </div>
-            </div>
-          </form>
-        <div class="row">
-          <div class="input-field col s12 m12 l12">
-            <i class="material-icons prefix">mode_edit</i>
-            <textarea name="message" id="icon_prefix2" class="materialize-textarea"></textarea>
-            <label for="icon_prefix2">Message</label>
+            <!-- <div class="card-action">
+              <a class="white-text" href="#">This is a link</a>
+              <a class="white-text" href="#">This is a link</a>
+            </div> -->
           </div>
         </div>
-        <button class="btn" type="submit">Send</button>
-      </form>
-    </div>
+      </div>
+
+      <!-- Form -->
+      <div class="contact-form center-align">
+        <form method="POST" action="http://formspree.io/onahypetingx@gmail.com">
+
+          <!-- Name Row -->
+          <div class="row">
+            <div class="input-field col s12 m8 l8">
+              <i class="material-icons prefix">account_circle</i>
+              <input name="name" id="icon_prefix" type="text" class="validate">
+              <label for="icon_prefix">First Name</label>
+            </div>
+          </div> 
+
+          <!-- Email Row -->
+          <div class="row">
+            <div class="input-field col s12 m8 l8">
+              <i class="material-icons prefix">email</i>
+              <input name="email" id="icon_email" type="email" class="validate">
+              <label for="icon_email">Email</label>
+            </div>
+          </div> 
+
+          <!-- Message Row -->
+          <div class="row">
+            <div class="input-field col s12 m12 l12">
+              <i class="material-icons prefix">mode_edit</i>
+              <textarea name="message" id="icon_prefix2" class="materialize-textarea"></textarea>
+              <label for="icon_prefix2">Message</label>
+            </div>
+          </div> 
+
+          <button class="form-btn btn red lighten-1" type="submit">Send</button>
+
+        </form> <!-- Whole Form -->
+      </div> <!-- Center Align -->
+    </div> <!-- Container -->
 
   </div> <!-- #wrapped, page fade on load -->
 

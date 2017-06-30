@@ -184,8 +184,12 @@ nav.nav-center ul li a {
 
 /************************ Contact Page ************************/
 
-.contact-form {
-  margin-top: 5%;
+
+/* Info Banner */
+
+#info-banner {
+  width: 100px;
+  height: 100px;
 }
 
 /* Form Icon Colour */
@@ -223,7 +227,11 @@ textarea.materialize-textarea:focus:not([readonly])+label{
   color: #0277bd;
 }
 
+/* Form Submit Button */
 
+.form-btn {
+  width: 30%;
+}
 
 /************************ Media Query's ************************/
 
@@ -232,8 +240,10 @@ textarea.materialize-textarea:focus:not([readonly])+label{
 
   /***** LANDING PAGE MEDIA QUERYS *****/
   .landing-body {
-    background-image: url("../img/ldn-map.jpg");
-    background-position: cover;
+    background-image: url("../img/london.png");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .vid-container {
@@ -307,12 +317,16 @@ textarea.materialize-textarea:focus:not([readonly])+label{
 
   /***** CONTACT PAGE MEDIA QUERYS *****/
 
-  .contact-form {
+  form {
     margin-right: 10%;
   }
 
-  .material-icons {
-    display: none;
+  .contact-form {
+    margin: 10%;
+  }
+
+  .form-btn {
+    width: 60%;
   }
 
 }
@@ -322,11 +336,12 @@ textarea.materialize-textarea:focus:not([readonly])+label{
 
   /* LANDING PAGE MEDIA QUERYS */
   .landing-body {
-    background-image: url("../img/ldn-map.jpg");
+    background-image: url("../img/london.png");
     background-position: center;
-   /* background-attachment: fixed;
-    background-position: 47% 25%;
-    background-repeat: no-repeat;*/
+    background-attachment: fixed;
+    background-position: 78% 25%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
   }
 
   .vid-container {
@@ -382,7 +397,7 @@ textarea.materialize-textarea:focus:not([readonly])+label{
   .contact-form {
     margin-right: 10%;
   }
-  
+
 }
 
 /* Mac 15inch */
