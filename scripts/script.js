@@ -61,7 +61,7 @@ function calcRoute(start, end) {
   });
 };
 
-/////////////// jQuery & TFL API & GEOLOCATION & LOADING ///////////////
+/////////////// jQuery & TFL API & GEOLOCATION & LOADING GIF ///////////////
 
 ////////////// Get Lat & Lng For All Bike Locations 
 function getLatLng() {
@@ -83,27 +83,27 @@ function showLoadingGif() {
     $(this).delay(600);
   });
   $("#loading").fadeIn(600);
-}
+};
 
 function hideLoadingGif() {
   $("#loading").fadeOut(200);
   $('#map_canvas').fadeTo(600, 0, function(){
     $(this).fadeTo(600, 1);
   });
-}
+};
 
 function hideLoadingGifForError() {
   $("#loading").fadeOut(200);
   $('#map_canvas').fadeTo(1200, 0, function(){
     $(this).fadeTo(1200, 1);
   });
-}
+};
 
 /////////////// Geo Locating Error Message
 
 function showError() {
   $("#error-message").fadeIn(600)
-}
+};
 
 /////////////// Geo location button ///////////////
 $('.find-me').on('click', function(){
@@ -168,7 +168,7 @@ $(".mute-video").click(function () {
         $("video").prop('muted', true);
         $(this).removeClass('unmute-video');
     }
-    console.log($("video").prop('muted'))
+    
 });
 
 ////////////// Main Page Fade When Load
