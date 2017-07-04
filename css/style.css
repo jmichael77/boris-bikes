@@ -288,7 +288,7 @@ textarea.materialize-textarea:focus:not([readonly])+label{
   }
 
   #error-message {
-    margin-left: -6%;
+    margin-right: 15%;
   }
 
   .google-button {
@@ -373,6 +373,18 @@ textarea.materialize-textarea:focus:not([readonly])+label{
     margin-top: 0;
   }
 
+  .social {
+    height: 152px;
+    width: 33px;
+    right: 1%;
+  }
+
+  /* Main Page Media Querys */
+
+  #error-message {
+    margin-left: 10%;
+  }
+
   #find-me {
     width: 100%;
     margin-bottom: 10px;
@@ -384,12 +396,7 @@ textarea.materialize-textarea:focus:not([readonly])+label{
 
   #loading {
     margin-left: 28.5%;
-  }
-
-  .social {
-    height: 152px;
-    width: 33px;
-    right: 1%;
+    margin-top: 15%;
   }
 
   /***** CONTACT PAGE MEDIA QUERYS *****/
