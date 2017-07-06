@@ -2,12 +2,34 @@
 // GOOGLE MAPS API LINK https://maps.googleapis.com/maps/api/js?key=AIzaSyCtDCJX_HnBmTn1ePWnb3R4urx9N0EBe6o&libraries=places
 
 var map = null;
-var currentPosition = null;
-var getPosition = null;
 var infoWindow = null;
 
 var directionsDisplay;
 var directionsService;
+
+/****************************** Landing Page ******************************/ 
+
+/////////////// Mute Button
+$("video").prop('muted', true);
+
+$(".mute-video").click(function () {
+    if ($("video").prop('muted')) {
+        $("video").prop('muted', false);
+        $(this).addClass('unmute-video');
+
+    } else {
+        $("video").prop('muted', true);
+        $(this).removeClass('unmute-video');
+    }
+    
+});
+
+////////////// Main Page Fade When Load
+$(document).ready(function(){
+    $('#wrapped').fadeIn(1500);
+});
+
+/****************************** Main Page ******************************/ 
 
 /////////////// Initializing the map ///////////////
 function initMap(){
@@ -61,9 +83,9 @@ function calcRoute(start, end) {
   });
 };
 
-/////////////// jQuery & TFL API & GEOLOCATION & LOADING GIF ///////////////
+/////////////// jQuery Stuff On Main Page ///////////////
 
-////////////// Get Lat & Lng For All Bike Locations 
+////////////// Get Lat & Lng For All Bike Locations & Get Amount Of Bikes Available
 function getLatLng() {
   $.ajax({ 
     url: "https://api.tfl.gov.uk/BikePoint/?app_key=70f368b0777b1f4a568b24aadb61ce78&app_id=eb934f02",
@@ -154,24 +176,29 @@ $('.show-all').on('click', function(){
   map.setCenter({lat:51.507281, lng:-0.127566});
 });
 
-/////////////// Landing Page Stuff ///////////////
+/****************************** Contact Page ******************************/ 
 
-/////////////// Mute Button
-$("video").prop('muted', true);
+///////////// Form Validation ///////////// 
 
-$(".mute-video").click(function () {
-    if ($("video").prop('muted')) {
-        $("video").prop('muted', false);
-        $(this).addClass('unmute-video');
+$('form').submit(function () {
 
-    } else {
-        $("video").prop('muted', true);
-        $(this).removeClass('unmute-video');
+    // Get Input Values
+    var name = $('#name-input').val();
+    var email = $('#email-input').val();
+    var message = $('#message-input').val();
+
+    // Check if empty of not
+    if (name === '') {
+        alert('Name is empty.');
+        return false;
     }
-    
-});
+    else if (email === '') {
+        alert('Email is empty.');
+        return false;
+    }
+    else if (message === '') {
+        alert('Message is empty.');
+        return false;
+    }
 
-////////////// Main Page Fade When Load
-$(document).ready(function(){
-    $('#wrapped').fadeIn(1500);
 });
