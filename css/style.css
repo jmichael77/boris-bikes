@@ -194,40 +194,41 @@ nav.nav-center ul li a {
 
 /* Form Icon Colour */
 .input-field .prefix.active {
-  color: #fbc02d;
+  color: #0277bd;
 }
 
 /* Text Form Colour */
 input[type=text]:focus:not([readonly]){
-  border-bottom: 1px #fbc02d;
-  box-shadow: 0 1px 0 0 #fbc02d;
+  border-bottom: 1px solid #0277bd;
+  box-shadow: 0 1px 0 0 #0277bd;
 }
 
 input[type=text]:focus:not([readonly])+label{
-  color: #fbc02d;
+  color: #0277bd;
 }
 
 /* Email Form Colour */
 input[type=email]:focus:not([readonly]){
-  border-bottom: 1px solid #fbc02d;
-  box-shadow: 0 1px 0 0 #fbc02d;
+  border-bottom: 1px solid #0277bd;
+  box-shadow: 0 1px 0 0 #0277bd;
 }
 
 input[type=email]:focus:not([readonly])+label{
-  color: #fbc02d;
+  color: #0277bd;
 }
 
 /* Text Area Form Colour */
 textarea.materialize-textarea:focus:not([readonly]){
-  border-bottom: 1px solid #fbc02d;
-  box-shadow: 0 1px 0 0 #fbc02d;
+  border-bottom: 1px solid #0277bd;
+  box-shadow: 0 1px 0 0 #0277bd;
 }
 
 textarea.materialize-textarea:focus:not([readonly])+label{
-  color: #fbc02d;
+  color: #0277bd;
 }
 
-/* Form Submit But#fbc02d
+/* Form Submit Button */
+
 .form-btn {
   width: 30%;
 }
